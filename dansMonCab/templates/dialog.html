@@ -1,0 +1,19 @@
+<!-- dialog.html -->
+{% extends 'dansmoncab.html' %}
+
+{% block content %}
+    <div id="dialog">
+        <p class="sys_talk">Bonjour ! Où puis-je vous conduire ?</p>
+    </div>
+
+<!-- Search -->
+    <div style="width: 100%; padding: 0;" class="container">
+        <form id="searchEntry">
+         {{ form.hidden_tag() }}
+            {{ form.entry(id="search_entry", class="what_in w-100",
+                placeholder="Bonjour, connaissez-vous l'adresse du musée du Louvre ?") }}
+                {{ form.submit(id="ask", type="submit", class="btn btn-dark btn-md") }}
+        </form>
+    </div>
+
+{% endblock %}
