@@ -17,6 +17,8 @@ Intended for French users, the language communication of dansMonCab! is French.
 
 Feel free to <a target="_blank" href="https://dansmoncab.herokuapp.com/">play with it</a>! And be kind with Serge, our taxi driver, who sometimes will need you to spell again... 
 
+Also, when you first launch the application, you may experience a 30-second delay because of the Heroku activation / deactivation mechanism that automatically disconnects an application if it has no users for a specific period of time. Please, be patient! The application works well once it is activated.
+
 ## Features
 
 <img src="dansMonCab_screen.png">
