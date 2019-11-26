@@ -147,5 +147,17 @@ class Driver:
         self.link = page[num]['fullurl']
         print("\nwiki extract : ", self.extract)
 
-d = Driver("bonjour, je cherche le chateau de versailles.")
-d.parse()
+
+entry = ["Salut GrandPy ! Est-ce que tu connais l'adresse de l'institut pasteur ?",
+ "Salut GrandPy ! Sais-tu où se trouve le musée du Louvre ?",
+ "Bonjour, pouvez-vous me conduire chez Orange Cyberdéfense ?",
+ "Bonjour, je souhaiterais aller chez Risk&Co.",
+ "Emmenez-moi au musée d'Orsay, svp.",
+ "Je suis attendue chez Bertin IT.",
+ "J'ai rendez-vous chez Itrust.",
+ "Je cherche l'adresse de PSA Poissy.",
+ "bonjour, je cherche le chateau de versailles."]
+
+for item in entry:
+    d = Driver(item)
+    d.parse()
