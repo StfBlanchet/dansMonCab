@@ -122,7 +122,8 @@ class Driver:
         """
         uri = WIKI + SEARCH + self.search
         r = requests.get(uri).json()
-        if not r['query']['search']:
+        print(r)
+        if not r:
             # no wiki item neither: stop there
             self.status = 'nok'
             print("\nwiki fails")
@@ -149,14 +150,16 @@ class Driver:
 
 
 entry = ["Salut GrandPy ! Est-ce que tu connais l'adresse de l'institut pasteur ?",
- "Salut GrandPy ! Sais-tu où se trouve le musée du Louvre ?",
- "Bonjour, pouvez-vous me conduire chez Orange Cyberdéfense ?",
- "Bonjour, je souhaiterais aller chez Risk&Co.",
- "Emmenez-moi au musée d'Orsay, svp.",
- "Je suis attendue chez Bertin IT.",
- "J'ai rendez-vous chez Itrust.",
- "Je cherche l'adresse de PSA Poissy.",
- "bonjour, je cherche le chateau de versailles."]
+        "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?",
+        "Salut GrandPy ! Sais-tu où se trouve le musée du Louvre ?",
+        "Bonjour, pouvez-vous me conduire chez Orange Cyberdéfense ?",
+        "Bonjour, je souhaiterais aller chez Risk&Co.",
+        "Emmenez-moi au musée d'Orsay, svp.",
+        "Je suis attendue chez Bertin IT.",
+        "J'ai rendez-vous chez Itrust.",
+        "Je cherche l'adresse de PSA Poissy.",
+        "J'ai rdv chez renault guyancourt,
+        "bonjour, je cherche le chateau de versailles."]
 
 for item in entry:
     d = Driver(item)
