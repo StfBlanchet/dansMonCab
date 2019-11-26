@@ -158,7 +158,7 @@ entry = ["Salut GrandPy ! Est-ce que tu connais l'adresse de l'institut pasteur 
         "Je suis attendue chez Bertin IT.",
         "J'ai rendez-vous chez Itrust.",
         "Je cherche l'adresse de PSA Poissy.",
-        "J'ai rdv chez renault guyancourt,
+        "J'ai rdv chez renault guyancourt",
         "bonjour, je cherche le chateau de versailles."]
 
 for item in entry:
