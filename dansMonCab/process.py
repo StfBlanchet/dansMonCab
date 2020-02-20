@@ -1,7 +1,7 @@
 import re
 from unidecode import unidecode
 import spacy
-nlp = spacy.load('fr_core_news_md')
+nlp = spacy.load('fr_core_news_sm')
 
 
 # To be removed
