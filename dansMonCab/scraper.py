@@ -6,9 +6,9 @@ dansMonCab scraper
 """
 
 
-from modules.reply import *
-from modules.sources import *
-from modules.process import *
+from dansMonCab.reply import *
+from dansMonCab.sources import *
+from dansMonCab.process import *
 
 import random
 import requests
