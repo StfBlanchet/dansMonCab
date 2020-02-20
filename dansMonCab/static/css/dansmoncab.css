@@ -1,32 +1,43 @@
 /*dansMonCab chatbot css*/
 
+/*!
+ * Start Bootstrap - Stylish Portfolio v5.0.7 (https://startbootstrap.com/template-overviews/stylish-portfolio)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+ */
+
+@font-face {
+  font-family: 'Oswald', sans-serif;
+  src: url('static/css/fonts/Oswald/static/Oswald-ExtraLight.ttf');
+  }
+
 body,
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*header*/
 
 header {
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-    text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  text-align: left;
 }
 
 header h1 {
-    padding-top: 1rem;
-    font-weight: 900;
+  padding-top: 1rem;
+  font-weight: 900;
 }
 
 #logo_sm {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .what_in {
@@ -64,7 +75,9 @@ header h1 {
 }
 
 .story {
-text-align: justify;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 p.user_talk {
@@ -86,8 +99,25 @@ p.sys_talk {
   border-radius: 5px;
 }
 
+.modal {
+  display:    none;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba(0, 0, 0, .85)
+            50% 50%
+            no-repeat;
+  padding:0;
+  text-align: center;
+  color: #fff;
+  text-transform:uppercase;
+}
+
 .content-section {
-  padding-top: 4.5rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
@@ -180,6 +210,7 @@ h3 {
 .scroll-to-top i {
   font-weight: 800;
 }
+
 
 /* Side Menu */
 #sidebar-wrapper {
@@ -288,6 +319,13 @@ h3 {
   background-size: cover;
 }
 
+.pic h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: block;
+  max-width: 30rem;
+}
+
 footer.footer {
   padding-top: 5rem;
   padding-bottom: 1rem;
@@ -315,16 +353,6 @@ a {
 
 a:hover, a:focus, a:active {
   color: #0b5394ff;
-}
-
-.wiki {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  margin-top: 10px;
-  padding: 5px;
-  color: #fff !important;
-  background-color: #000 !important;
-  border-radius: 8px;
 }
 
 .btn-dark {
@@ -380,4 +408,27 @@ a:hover, a:focus, a:active {
 
 .text-secondary {
   color: #ecb807 !important;
+}
+
+.wiki {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  color: #fff !important;
+  background-color: #000 !important;
+  border-radius: 8px;
+}
+
+.ner {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  color: #fff !important;
+  background-color: #5b2c6f !important;
+  border-radius: 8px;
 }
