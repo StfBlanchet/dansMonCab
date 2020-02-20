@@ -9,7 +9,7 @@ File that manages the app routes.
 from flask import render_template, request, jsonify
 from dansMonCab import app
 from dansMonCab.forms import *
-from dansMonCab.parser import *
+from dansMonCab.scraper import *
 
 
 @app.route('/')
@@ -20,20 +20,24 @@ def home():
     return render_template("dialog.html", title='Dans mon cab !', form=form)
 
 
-@app.route('/search', methods=['POST'])
+@app.route('/search', methods=['POST', 'GET'])
 def process_entry():
-    # Launch user input processing.
-    entry = request.form['user_entry']
-    driver = Driver(entry)
-    driver.parse()
+    if request.method == 'POST':
+        entry = request.form['user_entry']
+        driver = Driver(entry)
+        driver.get_entity()
 
-    return jsonify({
-        'status': driver.status,
-        'reply': driver.reply,
-        'end_reply': driver.end_reply,
-        'address': driver.address,
-        'g_map': driver.g_map,
-        'entity': driver.entity,
-        'extract': driver.extract,
-        'link': driver.link
-    })
+        return jsonify({
+            'entity': driver.entity,
+            'brief': driver.brief,
+            'info': driver.info,
+            'address': driver.address,
+            'city': driver.city,
+            'g_map': driver.g_map,
+            'news': driver.news,
+            'extract': driver.extract,
+            'ner': driver.ner,
+            'link': driver.link,
+            'reply': driver.reply,
+            'end_reply': driver.end_reply
+        })
